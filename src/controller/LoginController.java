@@ -16,11 +16,10 @@ import model.User;
 @WebServlet(urlPatterns= {"/login"})
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 
     public LoginController() {
         super();
-
+      
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -32,6 +31,7 @@ public class LoginController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String email = request.getParameter("email"); 
 		String password = request.getParameter("password"); 
+
 		ValidateUser validateUser = new ValidateUser();
 		if(validateUser.validate(email,password)) {
 			RequestDispatcher rd=this.getServletContext().getRequestDispatcher("/WEB-INF/views/blogView.jsp");

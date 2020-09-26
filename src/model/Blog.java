@@ -2,35 +2,34 @@ package model;
 
 import java.time.LocalDate;
 
-public class Blog {
-	private String blogTitle;
-	private String blogDescription;
-	private LocalDate date;
+// Type your code
+public class Blog{
+	String title;
+	String description;
+	LocalDate postedOn;
 	
-	public Blog(String blogTitle, String blogDescription, LocalDate date) {
-		
-		this.blogTitle = blogTitle;
-		this.blogDescription = blogDescription;
-		this.date = date;
+	public String getTitle() {
+		return title;
 	}
-	public String getBlogTitle() {
-		return blogTitle;
+	public void setTitle(String title) {
+		this.title = title;
 	}
-	public void setBlogTitle(String blogTitle) {
-		this.blogTitle = blogTitle;
+	public String getDescription() {
+		return description;
 	}
-	public String getBlogDescription() {
-		return blogDescription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
-	public void setBlogDescription(String blogDescription) {
-		this.blogDescription = blogDescription;
+	public LocalDate getPostedOn() {
+		return postedOn;
 	}
-	public LocalDate getDate() {
-		return date;
+	public void setPostedOn(LocalDate postedOn) {
+		this.postedOn = postedOn;
 	}
-	public void setDate(LocalDate date) {
-		this.date = date;
+
+	public Blog(String title,String description,LocalDate postedOn) {
+		this.title = title;
+		this.description = description;
+		this.postedOn = postedOn;
 	}
-	
-	
 }
